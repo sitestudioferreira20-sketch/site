@@ -24,17 +24,20 @@ form.addEventListener('submit', function (e) {
     return;
   }
 
-  let textoMensagem = `Olá Studio Ferreira!
-Meu nome é: *${nome}*
-Meu telefone é: *${telefone}*
-Serviço desejado: *${servico}*`;
+let textoMensagem = `Olá 👋
+Encontrei o site do Studio Ferreira e quero agendar um horário:
 
-  if (msg) {
-    textoMensagem += `
+*Nome:* ${nome}
+*Telefone:* ${telefone}
+*Serviço:* ${servico}
 
-Observação:
-${msg}`;
-  }
+Quando vocês têm horário disponível?`;
+
+if (msg) {
+  textoMensagem += `
+
+*Observação:* ${msg}`;
+}
 
   const numeroWhatsApp = "5511963439363";
   const textoEncoded = encodeURIComponent(textoMensagem);
@@ -42,4 +45,5 @@ ${msg}`;
   const url = `https://wa.me/${numeroWhatsApp}?text=${textoEncoded}`;
   window.open(url, '_blank');
 });
+
 
