@@ -25,8 +25,8 @@ form.addEventListener('submit', function (e) {
   }
 
   let textoMensagem = `Olá Studio Ferreira!
-Me chamo: *${nome}*
-Telefone: *${telefone}*
+Meu nome é: *${nome}*
+Meu telefone é: *${telefone}*
 Serviço desejado: *${servico}*`;
 
   if (msg) {
@@ -42,3 +42,4 @@ ${msg}`;
   const url = `https://wa.me/${numeroWhatsApp}?text=${textoEncoded}`;
   window.open(url, '_blank');
 });
+
